@@ -3,6 +3,7 @@
 html, body {
     height: 100%;
     font-family: $ubuntuFont;
+    font-size: 16px;
 }
 
 .page {
@@ -20,4 +21,31 @@ html, body {
 
 .page__buffer {
     height: 50px;
+}
+
+.logo-height{
+    height: 50px;
+}
+
+.modal-btn{
+    background: $red url(%=static=%assets/header/paw.min.svg) no-repeat;
+    -webkit-background-size: 15px;
+    background-size: 15px;
+    background-position: 15px center;
+    color: $white;
+    text-decoration: none;
+    padding: 10px 20px 10px 37px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-style: normal;
+    font-size: .875rem;
+
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+    
+    &:hover{
+        background-color: darken($red, 5%);
+    }
 }

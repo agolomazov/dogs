@@ -1,1 +1,133 @@
+.header{
+  background-color: $header-bg;
+  width: 100%;
+}
+
+.header__wrapper{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1080px;
+  min-width: 280px;
+}
+
+.header__wrapper .left-part{
+  position: relative;
+}
+
+.header__wrapper .logo-link{
+  display: block;
+  @extend .logo-height;
+  width: 132px;
+}
+
+.right-part{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.navigation{
+  margin: 0 40px 0 0;
+  padding: 15px 0;
+  @extend .logo-height;
+}
+
+.navigation-toggle{
+  display: none;
+}
+
+.menu{
+  margin: 0 40px 0 0;
+  font-size: 0;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.menu__item{
+  display: inline-block;
+  font-size: .875rem;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0 2rem 0 0;
+  text-transform: uppercase;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.menu__item:after{
+  content: '';
+  display: block;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  background-color: $menu-link-color;
+  right: -20px;
+  top: calc(50% - 5px/2);
+}
+
+.menu__item:last-child:after{
+  display: none;
+}
+
+.menu__item:last-child{
+  margin: 0;
+}
+
+.menu__link{
+  color: $menu-link-color;
+  text-decoration: none;
+  -webkit-transition: all .35s ease;
+  -moz-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+
+  &:hover{
+    color: $red;
+  }
+}
+
+.menu .dropdown-menu{
+  display: none;
+}
+
+.phone--header{
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 0 40px 0 0;
+  text-transform: uppercase;
+}
+
+.phone__link{
+  background: url(%=static=%assets/header/phone.min.svg) no-repeat;
+  -webkit-background-size: 15px 16px;
+  background-size: 15px 16px;
+  background-position-y: 2px;
+  color: $dark-gray;
+  text-decoration: none;
+  padding: 0 0 0 20px;
+
+  -webkit-transition: all .35s ease;
+  -moz-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+
+  &:hover{
+    color: lighten($dark-gray, 20%);
+  }
+}
+
+
 
